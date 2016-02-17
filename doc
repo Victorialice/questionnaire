@@ -1,0 +1,1 @@
+rails generate model Question name:string age:string agender:string address:string telephone:string ideas:string advice:string

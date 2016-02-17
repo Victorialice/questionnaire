@@ -1,0 +1,71 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <form name="form" method="post" action="create">
+      <table width="500" border="0" align="center" cellpadding="0" cellspacing="2">
+        <tr>
+          <td width="143" height="25">name: </td>
+          <td width="351"><input name="question[name]" type="text" id="name" size="20"></td>
+        </tr>
+        <tr>
+          <td height="25">age: </td>
+          <td><select name="question[age]" id="age">
+              <option value="5" selected>5</option>
+              <option value="6" >6</option>
+              <option value="7" >7</option>
+              <option value="8" >8</option>
+              <option value="9" >9</option>
+              <option value="10" >10</option>
+              <option value="11" >11</option>
+              <option value="12" >12</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td height="25">agender: </td>
+          <td><input name="question[radiobutton]" type="radio" value="radiobutton" checked>
+            boy 
+            <input name="question[radiobutton]" type="radio" value="radiobutton" >
+            gril</td>
+        </tr>
+        <tr>
+          <td height="25">address: </td>
+          <td><input name="question[textfield]" type="text" size="40"></td>
+        </tr>
+        <tr>
+          <td height="25">telephone number: </td>
+          <td><input name="question[textfield2]" type="text" size="15"></td>
+        </tr>
+        <tr>
+          <td height="25">ideas about products: </td>
+          <td><input type="checkbox" name="question[checkbox]" value="checkbox">
+            great
+            <input type="checkbox" name="question[checkbox2]" value="checkbox">
+            good
+            <input type="checkbox" name="question[checkbox2]" value="checkbox">
+            bad</td>
+        </tr>
+        <tr>
+          <td height="25">advices: </td>
+          <td>
+            <textarea name="question[textarea]" cols="40" rows="6"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td height="25" colspan="2" align="center">
+            <input type="submit" name="question[Submit3]" value="submit">
+            <input type="submit" name="question[Submit4]" value="reset">
+          </td>
+        </tr>
+        </table>
+      </form>
+      <% @questionnaires.each do |q| %>
+        <p>id: <%= q.id %></p>
+        <p>name: <%= q.name %></p>
+        <p>age: <%= q.age %></p>
+        <p>created: <%= q.created_at %></p>
+      <% end %>
+
+      </body>
+    </html>
