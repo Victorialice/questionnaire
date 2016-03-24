@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
+  resources :products
   post 'create' => 'questions#create'
   get'create' => 'questions#create'
   get 'index' => 'questions#index'
