@@ -3,6 +3,36 @@
   </head>
   <body>
     <form name="form" method="post" action="create">
+
+      <!--province_city_district start -->
+      <ul>
+        <li>起始地</li>
+        <li class="call_input">
+        <select name="shipment[province_id]" id="shipment_province_id"  class="placeInput" placeholder="省市"></select>
+        <select name="shipment[city_id]" id="shipment_city_id"  class="placeInput" placeholder="城市"></select>
+        <select name="shipment[county_id]" id="shipment_county_id" class="placeInput"  style="display:inline;" placeholder="区县"></select>
+        <%= text_field_tag :street %>
+        <% if false %>          
+          <input class="placeInput" placeholder="从哪里出发?" id="startaddress" type="text" value="" name="startaddress" autocomplete="off" />
+      <% end %>
+        </li>
+      </ul>
+
+      <ul>
+        <li>目的地</li>
+        <li class="call_input">
+        <select name="shipment[to_province_id]" id="shipment_to_province_id"></select>
+        <select name="shipment[to_city_id]" id="shipment_to_city_id"></select>
+        <select name="shipment[to_county_id]" id="shipment_to_county_id" style="display:inline;"></select>
+        <%= text_field_tag :to_street %>
+        <% if false %>
+          <input class="placeInput" type="text" id="endaddress" name="endaddress" value="" placeholder="送到哪里去？" autocomplete="off" />
+      <% end %>
+        </li>
+      </ul>
+
+      <!--province_city_district end -->
+
       <table width="500" border="0" align="center" cellpadding="0" cellspacing="2">
         <tr>
           <td width="143" height="25">name: </td>
@@ -67,5 +97,6 @@
         <p>created: <%= q.created_at %></p>
       <% end %>
 
+      <script src="/javascripts/area.js"></script><script src="/javascripts/shipment.js"></script>
       </body>
     </html>
