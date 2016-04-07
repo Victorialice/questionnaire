@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(){
+  $.getJSON("http://192.168.0.33:3000/api/users", function(result){  
+      var tt="";
+      $.each(result, function(k, v){
+        console.log(k);
+        console.log(v);
+        //tt += k + ":" + v + "<br/>";
+        tt += "<li id='user" + v.id + "'>" + v.name + "</li>"
+        //tt += k + ":" + v + "<br/>";
+        $("ul").html(tt)
+        });
+      });  
+}
+$(document).ready(myFunction());
+</script>
+</head>
+<body>
+<h1>asdfasdf</h1>
+<ul class="users">
+</ul>
+</body>
+</html>
+

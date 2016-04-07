@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'create' => 'questions#create'
   get'create' => 'questions#create'
   get 'index' => 'questions#index'
+get 'api_json' => 'questions#api_json'
   # You can have the root of your site routed with "root"
   root 'questions#index'
 

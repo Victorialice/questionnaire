@@ -7,6 +7,9 @@ class QuestionsController < ApplicationController
   def new 
   end
 
+  def api_json
+  end
+
   def create
 
     @question= Questionnaire.new(question_params)
